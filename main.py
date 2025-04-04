@@ -5,7 +5,6 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
 
-# Define a more complex CNN model
 def create_model():
     model = keras.Sequential([
         layers.Conv2D(64, (3, 3), activation='relu', input_shape=(128, 128, 3)),
@@ -44,7 +43,7 @@ def create_model():
     return model
 
 
-# Load dataset with data augmentation
+
 datagen = ImageDataGenerator(
     rescale=1. / 255,
     rotation_range=30,
@@ -69,14 +68,14 @@ val_generator = datagen.flow_from_directory(
     class_mode='binary',
     subset='validation')
 
-# Train model
+
 model = create_model()
 history = model.fit(train_generator, epochs=25, validation_data=val_generator)
 
-# Save the model
+
 model.save("drowsiness_model.h5")
 
-# Plot accuracy and loss
+
 plt.plot(history.history['accuracy'], label='accuracy')
 plt.plot(history.history['val_accuracy'], label='val_accuracy')
 plt.xlabel('Epoch')
