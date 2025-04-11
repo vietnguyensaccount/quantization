@@ -2,4 +2,4 @@ CNN Driver Drowsiness Detection with Uniform Quantization, based on github.com/s
 
 
 
-https://github.com/user-attachments/assets/d3919943-2fce-4166-a657-8e173a928ee1
+https://github.com/user-attachments/assets/30e082d0-50d4-4820-a7bb-6dee8e33a54a
